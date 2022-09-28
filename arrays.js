@@ -81,3 +81,25 @@ console.log(tim)
 tim.forEach((value, index, array) => {
     console.log(`${value}, `)
 })
+
+const arr5 = [1,2,3,4], arr6= [7,8,9,0]
+const arr7 = [arr5, arr6]
+console.log(arr7)
+
+const companies = ['google', 'amazon', 'flipkart', 'snapdeal', 'oyo', 'yahoo']
+
+console.log(companies.slice(companies.length/2, companies.length/2 + 1))
+console.log(companies.slice(companies.length - 3, companies.length))
+
+console.log(companies.includes('goibibo')?'it exists':'it does not')
+
+let text = "I live on the opposite house's backside. Call, me, anytime."
+const text_arr = text.split(' ')
+console.log(text_arr)
+const punctuations = [',', '.', '!', '?', '-']
+text_arr.forEach((value, index, array) => {
+    punctuations.forEach((val, idx, arr) => {
+        value.trim(val)
+    })
+})
+console.log(text_arr)
