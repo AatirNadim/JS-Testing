@@ -33,7 +33,7 @@ const res = (arr) => {
     // }
     // return sum
 }
-const newres = (...arr) => {
+const newres = (arr) => {
     return res(arr)*1234
 }
 // const res = function(arr) {
@@ -41,4 +41,18 @@ const newres = (...arr) => {
 //         return total + itr*2
 //     }, 0)
 // }
-console.log(res([1, 2, 3, 4, 5]))
+console.log(newres([1, 2, 3, 4, 5]))
+
+function fact(num1) {
+    if(num1 < 1) return 1
+    return num1*fact(num1 -1)
+}
+console.log(fact(20))
+
+
+let arr1 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0]
+
+const [one, two, ...rest] = arr1
+console.log(rest)
+
+console.log(arr1.slice(2))
