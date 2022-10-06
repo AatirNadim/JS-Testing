@@ -106,4 +106,5 @@ const filterNum = arr3.filter(callback)
 //note-> cannot call callback function before it is initialized, sp either initialize it beforehand or 
 
 
+console.log('sample test run to check whether resetted commit works just fine')
 console.log(filterNum)
