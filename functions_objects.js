@@ -56,3 +56,54 @@ const [one, two, ...rest] = arr1
 console.log(rest)
 
 console.log(arr1.slice(2))
+
+//unlimited number of parameters
+
+function sumInf(arr) {
+    console.log(typeof(arr))
+    let sum = arr.reduce((currsum, currval) => {
+        return currsum + currval
+    }, 0)
+    return sum
+}
+
+console.log(sumInf([1, 2, 3, 4]))
+// console.log(sumInf(1, 2, 3, 4, 5))
+// console.log(sumInf(1, 2, 3, 4, 5, 6))
+
+const fun = (...values) => {
+    // let num = [...values]
+    let sum = values.reduce((total, curr) => {return total + curr}, 0)
+    return sum
+}
+
+console.log(fun(1, 2, 3, 4))
+
+
+const num1 = [1, 2, 3,4]
+// pass by reference
+const num2 = num1
+num2.push(56)
+console.log(num1)
+console.log(num2)
+
+
+//filter function
+
+let arr2 = ['why', 'i', 'am', 'learning', 'this']
+const filterArray = (arr) => {
+    arr = arr.filter((str) => {return Boolean(str[0] - 'a') })
+    return arr
+}
+console.log(filterArray(arr2))
+let val1 = 10
+console.log(Boolean(val1))
+const callback = (itr) => {
+    return (Boolean)(itr&1)
+}
+const arr3 = [1, 2, 3, 4, 5, 6]
+const filterNum = arr3.filter(callback)
+//note-> cannot call callback function before it is initialized, sp either initialize it beforehand or 
+
+
+console.log(filterNum)
