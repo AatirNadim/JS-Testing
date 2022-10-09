@@ -80,3 +80,13 @@ setB.forEach((itr) => {
   else setc.add(itr)
 })
 console.log(setc)
+
+
+//working with maps
+let map1 = new Map()
+map1.set('aatir', 'nadim')
+map1.set('nadim', 'ansari')
+map1.forEach((itr) => console.log(itr))
+console.log(map1)
+
+console.log(map1.has('nadim'))
