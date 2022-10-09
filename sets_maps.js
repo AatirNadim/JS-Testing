@@ -60,3 +60,23 @@ console.log(set1.delete('aatir'))
 const arrobj  = []
 for(const itr of set1) arrobj.push({name : '', class : itr})
 arrobj.forEach((itr) => console.log(itr))
+
+//union of sets
+
+const a = [1, 2, 3, 4, 5, 7786]
+const b = ['aatir', 'aatir','Aatir', 'nadim', 1]
+let setc = new Set([...a,...b])
+console.log(setc)
+// (A - B) + (B - A)
+const c = [3, 4, 5,6]
+setc = new Set(c)
+let setA = new Set(a), setB = new Set(b)
+setA.forEach((itr) => {
+  if(setB.has(itr));
+  else setc.add(itr)
+})
+setB.forEach((itr) => {
+  if(setA.has(itr));
+  else setc.add(itr)
+})
+console.log(setc)
