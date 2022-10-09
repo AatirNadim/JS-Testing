@@ -38,3 +38,25 @@ languages.add(344)
 // console.log(languages.join(', '))
 //spread operator is a great tool --> it gives the values individually, and can be used to print elements in a single line
 console.log(...languages)
+
+let arr1 = [6,1, 2, 3, 4,4, 4, 5, 6 ,2]
+let set1 =new Set(arr1)
+console.log(set1)
+
+set1.add('dsdsd')
+set1.add('eee')
+console.log(set1)
+console.log(typeof set1)
+for(const itr of set1) console.log(typeof itr)
+
+set1.add({
+  name : 'aatir',
+  class : 'jekyll'
+})
+console.log(set1)
+
+console.log(set1.delete('aatir'))
+// console.log(set1)
+const arrobj  = []
+for(const itr of set1) arrobj.push({name : '', class : itr})
+arrobj.forEach((itr) => console.log(itr))
