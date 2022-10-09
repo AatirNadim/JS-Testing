@@ -27,5 +27,23 @@ console.log(obj1.traits.behaviour)
 console.log(obj1.class)
 
 //note that class is a keyword
+//everything is keyword specific
 let {name, traits, age, class : c} = obj1
 console.log(name, traits, c)
+//working just fine
+let {name : n, traits : {behaviour : b}} = obj1
+console.log(n, b)
+
+//object parameter with destructuring
+
+function disp({name, traits}) {
+    console.log('inside the function')
+    console.log(name, traits)
+}
+
+disp(obj1)
+//rest operator with objects
+let obj2 = {...obj1, travelogue : 'not applicable'}
+
+console.log(obj2)
+
