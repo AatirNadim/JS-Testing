@@ -62,3 +62,28 @@ console.log(person1.city)
 //setter functions
 
 console.log(person1)
+
+//static functions
+
+class class2 {
+    constructor(val1,val2, val3) {
+        const v1 = val1
+        const v2 = val2
+        const v3 = val3
+    }
+    getVal() {
+        return this.v1 + ' ' + this.v2 + ' ' + this.v3
+    }
+    static func1() {
+        let arr = [1, 2,3, 4, 5]
+        console.log(arr)
+    }
+}
+
+const cl = new class2(23,'sasa', 233)
+
+cl.getVal()
+//call the static function with class,when required
+//call the normal method with object of the class
+class2.func1()
+
