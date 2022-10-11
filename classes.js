@@ -87,3 +87,34 @@ cl.getVal()
 //call the normal method with object of the class
 class2.func1()
 
+//inheritance
+
+class Student extends Person {
+    derivedFunction() {
+        console.log('this is a derived function')
+    }
+    getFullName() {
+        console.log('now in the derived function')
+        return super.getFullName()
+    }
+}
+
+const stud1 = new Student('aatir', 'nadim', 20, 'india', 'lucknow')
+console.log('should this work')
+console.log(stud1.getFullName())
+stud1.derivedFunction()
+
+class Student1 extends Person {
+    constructor(firstName, lastName, age, country, city,gender) {
+        super(firstName, lastName, age, country, city);
+        this.gender = gender;
+    }
+    getGender() {
+        console.log(this.gender)
+    }
+}
+
+const stud2 = new Student1('aatir', 'nadim', 20, 'india', 'lucknow','male')
+
+console.log(stud2.getName)
+stud2.getGender()
