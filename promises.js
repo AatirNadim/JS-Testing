@@ -1,3 +1,4 @@
+
 console.log('getting started with promises')
 setTimeout(() => {
     console.log('afer waiting some time')
@@ -44,7 +45,15 @@ pro
 
 const promise = new Promise ((resolve, reject) => {
     setTimeout(() => {
-        const arr = [1, 2, 3, 4, 5, 6]
-
+        const arr = ['Aatir', 'Bilal', 'Ijlal', 'Faiz', 'Anzal', 'Rashid']
+        if(arr.includes('Bilal')) resolve('array includes the name')
+        else reject('array does not include the name')
     },3000)
 })
+
+promise
+    .then((msg) =>{console.log(msg)})
+    .catch((msg) => {console.log(msg)})
+
+//working with fetch api
+
